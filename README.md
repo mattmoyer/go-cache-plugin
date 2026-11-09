@@ -18,8 +18,9 @@ export GOCACHEPROG="go-cache-plugin --cache-dir=/tmp/gocache --bucket=some-s3-bu
 go test ./...
 ```
 
-Using the plugin requires a Go toolchain built with `GOEXPERIMENT=cacheprog` enabled.
-However, you do not need the experiment enabled to build the plugin itself.
+Go 1.24 and later support `GOCACHEPROG` by default. Earlier Go toolchains must
+be built with `GOEXPERIMENT=cacheprog` enabled to use the plugin; the experiment
+is not needed to build the plugin itself.
 
 ## Discussion
 
